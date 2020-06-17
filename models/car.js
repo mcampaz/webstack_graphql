@@ -10,7 +10,12 @@ const car = (sequelize, DataTypes) => {
             type: DataTypes.STRING
         }
     });
+
+    Car.associate = models => {
+        Car.belongsTo(models.User);
+    };
+
     return Car;
-}
+};
 
 module.exports = car;

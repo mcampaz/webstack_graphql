@@ -4,7 +4,13 @@ const user = (sequelize, DataTypes) => {
             type: DataTypes.STRING
         }
     });
+
+    User.associate = models => {
+        // one to many
+        User.hasMany(models.Car, {onDelete: 'CASCADE'});
+    };
+
     return User;
-}
+};
 
 module.exports = user;

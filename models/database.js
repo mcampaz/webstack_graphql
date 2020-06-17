@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('graphql', 'root', 'Leticia2012@', {
+const sequelize = new Sequelize('graphql', 'root', 'root', {
     dialect: 'mysql',
     operatorAliases: false,
     define: {
@@ -9,4 +9,4 @@ const sequelize = new Sequelize('graphql', 'root', 'Leticia2012@', {
 
 module.exports = {
     sequelize
-}
+};
